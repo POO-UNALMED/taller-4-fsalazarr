@@ -8,9 +8,13 @@ public class Persona {
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //cedula = 3;
     }
 
+    Persona() {
+        this.cedula = 0;
+		totalPersonas++;
+    }
     Persona(long cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
@@ -30,7 +34,8 @@ public class Persona {
     }
 
     Persona(String nombre) {
-        this.nombre = "";
+        this.cedula = 1;
+		this.nombre = nombre;
         totalPersonas++;
     }
     
